@@ -54,7 +54,7 @@ output (both to stdout and stderr).
 
 This started as a simple bash script, which I thought was really elegant.
 I wrote it quickly after being frustrated with YAML searching tools at work,
-and it all worked fine with small YAML files at home, but once I tried using it
+and it all worked fine with small YAML files at home. But once I tried using it
 on a very large YAML response, I learned just how INCREDIBLY SLOW bash scripts
 can be, even if they seem so nice. I was waiting *minutes* for my elegant
 script to complete.
