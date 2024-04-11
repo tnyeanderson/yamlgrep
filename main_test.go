@@ -34,7 +34,7 @@ func BenchmarkYAMLGrep(b *testing.B) {
 func BenchmarkYAMLGrep_Bash(b *testing.B) {
 	r := bytes.NewReader(content)
 	b.ResetTimer()
-	cmd := exec.Command("yamlgrep", "Male")
+	cmd := exec.Command("./testdata/yamlgrep.sh", "Male")
 	cmd.Stdin = r
 	cmd.Stdout = io.Discard
 	b.ResetTimer()
