@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"fmt"
 	"io"
 	"os"
 	"os/exec"
@@ -69,5 +70,8 @@ func main() {
 		writer:   os.Stdout,
 		grepArgs: os.Args[1:],
 	}
-	lex(os.Stdin, f.filter)
+	if err := lex(os.Stdin, f.filter); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
